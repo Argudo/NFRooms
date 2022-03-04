@@ -25,7 +25,7 @@ header nav{
 }
 
 #marca{
-    height: 100%;
+    height: fit-content;
     width: 25%;
     display: inline-flex;
     align-items: center;
@@ -136,6 +136,16 @@ footer #marca{
     top: 45%;
 }
 
+#sitemap a{
+    text-decoration: none;
+    color: gray;
+}
+
+#sitemap a:hover{
+    text-decoration: underline;
+}
+
+
 /* Rediseño segun tamaño */
 @media screen and (max-width: 1140px) {
     footer{
@@ -152,6 +162,8 @@ footer #marca{
         flex-direction: row;
         flex-wrap: wrap;
     }
+
+    
 
     #sitemap{
         height: 100%;
@@ -180,6 +192,10 @@ footer #marca{
         padding-bottom: 4px;
     }
 
+    #contacto-bloque{
+        padding-top: 20px;
+    }
+
     header{
         width: 100%;
         height: fit-content;
@@ -201,6 +217,7 @@ footer #marca{
 
     .menu{
         width: 100%;
+        height: fit-content;
         justify-content: center;
         padding-top: 10px;
     }
