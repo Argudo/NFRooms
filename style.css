@@ -4,6 +4,11 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body{ 
+    display:flex; 
+    flex-direction:column; 
+}
+
 header{
     width: 100%;
     height: 60px;
@@ -59,10 +64,12 @@ header nav li {
 }
 
 #content{
+    position: relative;
     height: 500px;
-    padding-top: 500px;
+    top: 30%;
     font-size: 40px;
     text-align: center;
+    vertical-align: center;
 }
 
 
@@ -70,6 +77,7 @@ header nav li {
 /*Footer*/
 
 footer{
+    margin-top: auto;
     width: 100%;
     height: fit-content;
     padding-top: 50px;
