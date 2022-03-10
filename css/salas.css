@@ -1,0 +1,188 @@
+#content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding-bottom: 100px;
+    height: fit-content;
+    width: 100%;
+}
+
+.group-large{
+    width: 90%;
+    max-width: 1400px;
+    height: fit-content;
+
+    box-shadow: 0 15px 30px 1px grey;
+	background: rgba(255, 255, 255, 0.90);
+	border-radius: 5px;
+	overflow: hidden;
+	margin: 5em auto;
+
+    display: inline-flex;
+}
+
+.group-large img{
+    width: 320px;
+    height: 320px;
+}
+
+.description{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.description h1{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+.group-mid{
+    width: 90%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-mid{
+    width: 47%;
+    height: fit-content;
+    box-shadow: 0 15px 30px 1px grey;
+	background: rgba(255, 255, 255, 0.90);
+	border-radius: 10px;
+	overflow: hidden;
+
+    display: inline-flex;
+}
+
+.card-mid img{
+    width: 320px;
+    height: 320px;
+}
+
+#popup{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(211,211,211,0.5);
+    width: 100%;
+    height: 100%;
+
+    display: none;
+}
+
+#info{
+    position: relative;
+    margin: auto;
+    box-shadow: 0 15px 30px 1px grey;
+    background-color:rgba(300,300,300,0.98);
+    border: 3px solid lightgray;
+    width: fit-content;
+    height: fit-content;
+    padding: 100px 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-button {
+    position: absolute;
+    z-index: 10;
+    color: #8a8a8a;
+    cursor: pointer;
+    background-color: white;
+    border: 0px;
+}
+
+.close-button, .close-button.medium {
+    right: 1rem;
+    top: 0.5rem;
+    font-size: 2.5em;
+    line-height: 1;
+}
+
+#info button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#info table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px;
+}
+
+@media screen and (max-width: 1400px){
+    .card-mid img{
+        width: 250px;
+        height: 250px;
+    }    
+}
+
+/* Redimension de cartas de tamaño medio */
+@media screen and (max-width: 1200px) {
+    .group-mid{
+        text-align: center;
+    }
+    .card-mid{
+        display: block;
+        width: min-content;
+        padding-bottom: 20px;
+    }
+
+    .card-mid img{
+        justify-content: center;
+        width: 420px;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .card-mid{
+        display: block;
+        width: 47%;
+        padding: 0px;
+        padding-bottom: 20px;
+        padding-top: 0px;
+    }
+
+    .card-mid img{
+        width: 100%;
+        height: 350px;
+        border-radius: 0px;
+    }
+
+    .description{
+        margin: 0 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .group-mid{
+        display: block;
+        padding-bottom: 20px;
+    }
+    .card-mid{
+        width: 100%;
+        margin-bottom: 5em;
+        border-radius: 5px;
+        max-width: 1400px;
+        height: fit-content;
+    }
+    .group-large{
+        display: block;
+        padding-bottom: 20px;
+        margin-top: 0px;
+    }
+
+    .group-large img{
+        width: 100%;
+        height: 350px;
+        border-radius: 0px;
+    }
+}
