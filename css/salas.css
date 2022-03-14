@@ -76,15 +76,18 @@
     justify-content: space-between;
 }
 
-.card-mid{
-    position: relative;
-}
-
-.card-mid .links{
-    position: absolute;
-    width: calc(47% - 40px);
-    bottom: 0%;
-    margin-bottom: 20px;
+@media screen and (min-width: 1401px) {
+    .card-mid{
+        position: relative;
+    }
+    
+    .card-mid .links{
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+        width: calc(100% - 360px);
+        margin-bottom: 20px;
+    }   
 }
 
 .card-mid{
@@ -111,6 +114,7 @@
     background-color:rgba(211,211,211,0.5);
     width: 100%;
     height: 100%;
+    z-index: 2;
 
     display: none;
 }
