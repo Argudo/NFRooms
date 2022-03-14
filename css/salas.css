@@ -10,7 +10,7 @@
 .group-large{
     width: 90%;
     max-width: 1400px;
-    height: fit-content;
+    height: 100%;
 
     box-shadow: 0 15px 30px 1px grey;
 	background: rgba(255, 255, 255, 0.90);
@@ -26,10 +26,38 @@
     height: 320px;
 }
 
+/* Etiquetas de reserva e informacion */
 .description{
+    position: relative;
     margin-left: 20px;
     margin-right: 10px;
+    margin-bottom: 20px;
 }
+
+.desc-container{
+    position: relative;
+}
+
+.group-large .links{
+    position: absolute;
+    bottom: 0%;
+    padding-bottom: 20px;
+    width: calc(100% - 40px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.links{
+    margin: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a{
+    padding-right: 1em;
+}
+
+/* Fin etiquetas de reserva e informacion */
 
 .description h1{
     margin-bottom: 10px;
@@ -39,12 +67,24 @@
 
 .group-mid{
     width: 90%;
+    height: 100%;
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
 
     display: flex;
     justify-content: space-between;
+}
+
+.card-mid{
+    position: relative;
+}
+
+.card-mid .links{
+    position: absolute;
+    width: calc(47% - 40px);
+    bottom: 0%;
+    margin-bottom: 20px;
 }
 
 .card-mid{
@@ -162,13 +202,13 @@
 
 @media screen and (max-width: 1400px){
     .card-mid img{
-        width: 250px;
-        height: 250px;
+        width: 350px;
+        height: 350px;
     }    
 }
 
 /* Redimension de cartas de tamaño medio */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
     .group-mid{
         text-align: center;
     }
@@ -176,12 +216,22 @@
         display: block;
         width: min-content;
         padding-bottom: 20px;
+        text-align: left;
     }
 
     .card-mid img{
         justify-content: center;
         width: 420px;
         height: 350px;
+    }
+
+    .card-mid .description{
+        height: 100%;
+        padding-bottom: 10px;
+    }
+    
+    .card-mid .description p{
+        padding-bottom: 40px;
     }
 }
 
@@ -192,6 +242,7 @@
         padding: 0px;
         padding-bottom: 20px;
         padding-top: 0px;
+        text-align: left;
     }
 
     .card-mid img{
@@ -202,30 +253,71 @@
 
     .description{
         margin: 0 20px;
+        margin-bottom: 20px;
+
+    }
+
+    .card-mid .description{
+        height: 100%;
+        padding-bottom: 10px;
+    }
+    
+    .card-mid .description p{
+        padding-bottom: 40px;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     .group-mid{
         display: block;
         padding-bottom: 20px;
+        text-align:left;
     }
     .card-mid{
         width: 100%;
         margin-bottom: 5em;
+        padding-bottom: 0px;
         border-radius: 5px;
         max-width: 1400px;
         height: fit-content;
     }
     .group-large{
         display: block;
-        padding-bottom: 20px;
         margin-top: 0px;
+        padding-bottom: 20px;
+    }
+
+    .description{
+        height: calc(100% - 370px);
+        padding-bottom: 10px;
+    }
+
+    .card-mid .description{
+        height: 100%;
+        padding-bottom: 10px;
+    }
+
+    .card-mid .links{
+        padding-bottom: 20px;
+    }
+
+    
+    .card-mid .description p{
+        padding-bottom: 20px;
     }
 
     .group-large img{
         width: 100%;
         height: 350px;
         border-radius: 0px;
+    }
+
+    .desc-container{
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+    }
+
+    .group-large .links{
+        margin-bottom: 20px;
     }
 }

@@ -18,6 +18,7 @@ header{
     display: flex;
     background-color: #364E68;
     color: white;
+    z-index: 2;
 }
 
 header nav{
