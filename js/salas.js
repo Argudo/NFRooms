@@ -6,7 +6,7 @@ function cargarInformacion(nombre, cap, precio){
     let obj_capacidad = document.getElementById("capacidad");
 
     obj_nombre.innerHTML = nombre;
-    obj_precio.innerHTML = precio;
+    obj_precio.innerHTML = precio+'$';
     obj_capacidad.innerHTML = cap;
 
     popup.setAttribute("style","display: flex;");

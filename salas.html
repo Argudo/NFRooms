@@ -7,6 +7,10 @@
 
         <script type="text/javascript" src="/js/salas.js"></script>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
         <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
     </head>
     <body>
@@ -31,16 +35,20 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <table>
-                    <th>Nombre</th>
-                    <th>Capacidad</th>
-                    <th>Precio</th>
-                    <th>Caracteristica 1</th>
-                    <tr>
-                        <td id="nombre">Sala Kyoto</td>
-                        <td id="capacidad">20</td>
-                        <td id="precio">400</td>
-                        <td>Prueba</td>
-                    </tr>
+                    <thead>
+                        <th>Nombre</th>
+                        <th>Capacidad</th>
+                        <th>Precio</th>
+                        <th>Caracteristica 1</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="nombre">Sala Kyoto</td>
+                            <td id="capacidad">20</td>
+                            <td id="precio">400</td>
+                            <td>Prueba</td>
+                        </tr>
+                    </tbody>
                 </table>
             </section>
         </div>
@@ -48,7 +56,7 @@
        
             <article class="group-large">
                 <div class="cont-hover">
-                    <img src="./imagenes/salas/Kyoto-1.jpg" alt="Sala X">
+                    <img src="./imagenes/salas/2614e580a7643d072ccbcec798e19fa3.jpg" alt="Sala X">
                     <div class="middle">
                         <div class="text">Reserva</div>
                     </div>
@@ -56,10 +64,13 @@
                 <div class="desc-container">
                     <div class="description">
                         <h1>Sala Kyoto</h1>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <p>La sala Kyoto, es una sala insonorizada dedicada a espacios para baile y yoga.
+                            El espacio se compone de una sala de danza o sala de yoga, sala de estar y baños. La sala es de unos 200 metros cuadrados y está equipada con un equipo de sonido, luces y una gran ventana con vistas a los jardines.  Alcanza una capacidad de hasta 50 personas.
+                            
+                            Está disponible para eventos y fiestas privadas, y también se puede alquilar para clases y talleres.</p>
                     </div>
                     <section class="links">
-                        <p onclick="cargarInformacion('Sala Kyoto', 50, 200);">Mas&nbsp;información</p>
+                        <p onclick="cargarInformacion('Sala Kyoto', 50, 1200);">Mas&nbsp;información</p>
                         <button class="pure-button">Reserva</button>
                     </section>
                 </div>
@@ -67,28 +78,32 @@
 
             <div class="group-mid">
                 <article class="card-mid">
-                    <img src="./imagenes/salas/Kyoto-1.jpg" alt="Sala X">
-                    <div>
+                    <img src="./imagenes/salas/51yquyPnEAL._AC_SY350_.jpg" alt="Sala X">
+                    <div style="height: calc(100% - 420px);">
                         <div class="description">
                             <h1>Sala Miami</h1>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <p>La sala Miami es una sala de estilo moderno con un par de elegantes mesas de trabajo y cómodas sillas de oficina que, junto con las lámparas de lectura, crean un ambiente relajado y tranquilo.</p>
                         </div>
                         <section class="links">
-                            <p onclick="cargarInformacion('Sala Miami', 10, 40);">Mas&nbsp;información</p>
+                            <p onclick="cargarInformacion('Sala Miami', 2, 40);">Mas&nbsp;información</p>
                             <button class="pure-button">Reserva</button>
                         </section>
                     </div>
                 </article>
                 
                 <article class="card-mid">
-                    <img src="./imagenes/salas/Kyoto-1.jpg" alt="Sala X">
-                    <div>
+                    <img src="./imagenes/salas/1-85687.jpeg" alt="Sala X">
+                    <div style="height: calc(100% - 420px);">
                         <div class="description">
                             <h1>Sala Otawa</h1>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <p>La sala Otawa es una sala dedicada al trabajo individual, es ideal para estudiantes que necesitan un lugar tranquilo para estudiar o para aquellos que necesitan un lugar para trabajar en silencio.
+
+
+
+                                La sala se encuentra en el segundo piso.</p>
                         </div>
                         <section class="links">
-                            <p onclick="cargarInformacion('Sala Otawa', 15, 80);">Mas&nbsp;información</p>
+                            <p onclick="cargarInformacion('Sala Otawa', 1, 25);">Mas&nbsp;información</p>
                             <button class="pure-button">Reserva</button>
                         </section>
                     </div>
@@ -97,18 +112,18 @@
 
             <article class="group-large">
                 <div class="cont-hover">
-                    <img src="./imagenes/salas/Kyoto-1.jpg" alt="Sala X">
+                    <img src="./imagenes/salas/DSC_0049-350x350.jpg" alt="Sala X">
                     <div class="middle">
                         <div class="text">Reserva</div>
                     </div>
                 </div>
                 <div class="desc-container">
                     <div class="description">
-                        <h1>Sala Kyoto</h1>
+                        <h1>Sala Berlin</h1>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                     </div>
                     <section class="links">
-                        <p onclick="cargarInformacion('Sala Kyoto', 50, 200);">Mas&nbsp;información</p>
+                        <p onclick="cargarInformacion('Sala Berlin', 5, 500);">Mas&nbsp;información</p>
                         <button class="pure-button">Reserva</button>
                     </section>
                 </div>
