@@ -53,8 +53,11 @@
     justify-content: space-between;
 }
 
-.links a{
+.links p{
     padding-right: 1em;
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
 }
 
 /* Fin etiquetas de reserva e informacion */
@@ -107,7 +110,7 @@
 }
 
 #popup{
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
