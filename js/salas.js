@@ -16,3 +16,7 @@ function cerrarPopUp(){
     let popup = document.getElementById("popup");
     popup.setAttribute("style", "display: none");
 }
+
+function reserva(id){
+    window.location.assign("/reservar?id=" + id);
+}
