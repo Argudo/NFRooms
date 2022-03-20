@@ -1,17 +1,20 @@
 <html lang="en">
-    <head>
-        <title>NF Rooms</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" type="text/css" href="./css/reservar.css">
-        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+<head>
+    <title>NF Rooms</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/reservar.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
+        integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
 
-        <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
-    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+
 <body>
     <header>
         <div id="Marca">
@@ -28,18 +31,27 @@
             </ul>
         </nav>
     </header>
+
     <main id="main"></main>
 
-    <form>
-        <input type="text"  placeholder=Nombre>
-        <input type="text"  placeholder=Apellidos><br>
-        <input type="text"  placeholder=Correo electrónico><br>
-        <input type="text"  placeholder=DNI>
-        <input type="text"  placeholder=Teléfono><br>
-        <select id="selectorSala"></select>
-        <input type="date"><br>
-        <button type="button">Reservar</button>
-    </form>
+    <div class="division">
+        <div class="izq">
+            <h1 id="tituloReserva">Reserva tu sala</h1>
+            <div class="grid-item1"><input class="input-center" type="text" placeholder="Nombre" ></div>
+            <div class="grid-item1"><input class="input-center" type="text" placeholder="Apellidos"></div>
+            <div class="grid-item2"><input class="email" type="text" placeholder="Correo electrónico"></div>
+            <div class="grid-item1"><input class="input-center" type="text" placeholder="DNI"></div>
+            <div class="grid-item1"><input class="input-center" type="text" placeholder="Teléfono"></div>
+            <div class="grid-item1"><select id="selectorSala"></select></div>
+            <div class="grid-item1"><input id="selectorFecha"class="input-center" type="date"></div>
+            <button class="botonForm">Reservar</button>
+        </div>
+
+        <div class="der">
+            <div class="grid-item1"><input type="text" placeholder="Nombre"></div>
+        </div>
+    </div>
+
 
     <footer>
         <div id="marca">
@@ -73,14 +85,15 @@
     <script src="./js/reservar.js"></script>
     <script>
         let params = window.location.search;
-        if(params && params !== "?"){
+        if (params && params !== "?") {
             let id = parseInt(params.split("=")[1]);
             let sala = buscarSala(id);
-            if(sala){
+            if (sala) {
                 document.getElementById("main").innerHTML = JSON.stringify(sala);
             }
         }
         cargarSalas();
     </script>
 </body>
+
 </html>
