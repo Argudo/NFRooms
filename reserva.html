@@ -35,19 +35,55 @@
     <main id="main">
 
         <div class="division">
-            <div class="izq">
+
+            <form class="formulario-reserva" onsubmit="validacion()">
                 <h1 id="titulo-reserva">Reserva tu sala</h1>
-                <div class="grid-item1"><input class="input-center" type="text" placeholder="Nombre"></div>
-                <div class="grid-item1"><input class="input-center" type="text" placeholder="Apellidos"></div>
-                <div class="grid-item2"><input class="email" type="text" placeholder="Correo electrónico"></div>
-                <div class="grid-item1"><input class="input-center" type="text" placeholder="DNI"></div>
-                <div class="grid-item1"><input class="input-center" type="text" placeholder="Teléfono"></div>
-                <div class="grid-item1"><select id="selectorSala" onchange="salaSeleccionada(this)">
-                <option value="" selected="selected">-- Selecciona una sala --</option>
-                </select></div>
-                <div class="grid-item1"><input id="selectorFecha" class="input-center" type="date"></div>
-                <div class="grid-item2"><button id="botonForm">Reservar</button></div>
-            </div>
+                <div class="grid-item1">
+                    <label id="label-formulario">Nombre </label><br>
+                    <input id="nombre-reserva" class="input-center" type="text" placeholder="Manuel">
+                    <p id="nombre-error" class="mensaje-error"></p>
+                </div>
+                <div class="grid-item1">
+                    <label id="label-formulario">Apellidos </label><br>
+                    <input id="apellidos-reserva" class="input-center" type="text" placeholder="Alcaparra Domínguez">
+                </div>
+                <div class="grid-item2">
+                    <label id="label-formulario">Email </label><br>
+                    <input id="email-reserva" class="email" type="text" placeholder="ejemplo@correo.es">
+                </div>
+                <div class="grid-item1">
+                    <label id="label-formulario">DNI </label><br>
+                    <input id="dni-reserva" class="input-center" type="text" placeholder="10101010X">
+                </div>
+                <div class="grid-item1">
+                    <label id="label-formulario">Teléfono </label><br>
+                    <input id="telefono-reserva" class="input-center" type="text" placeholder="659175889">
+                </div>
+                <div class="grid-item1">
+                    <label id="label-formulario">Sala escogida </label><br>
+                    <select id="selector-sala" onchange="salaSeleccionada(this)">
+                        <option value="" selected="selected">-- Selecciona una sala --</option>
+                    </select>
+                </div>
+                <div class="grid-item1">
+                    <label id="label-formulario">Número personas </label><br>
+                    <input id="personas-reserva" class="input-center" type="text" placeholder="10">
+                </div>
+                <div class="grid-item1">
+                    <label>Fecha </label><br>
+                    <input id="selector-fecha" class="input-center" type="date">
+                </div>
+                <div class="grid-item1">
+                    <label>Hora inicio - fin </label><br>
+                    <input id="selector-horai" class="input-center" type="time">
+                    <input id="selector-horaf" class="input-center" type="time">
+                </div>
+                <div class="grid-item2">
+                    <input type="submit" id="boton-form" value="Reservar">
+                </div>
+            </form>
+
+
 
             <div id="informacion-sala" class="der" style="display:none">
                 <img id="img-sala" alt="Sala X">

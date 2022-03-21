@@ -39,7 +39,7 @@ function cargarSalas(){
 }
 
 function cargarSala(sala){
-    $('#selectorSala').append(`<option value="${sala.id}">${sala.nombre}</option>`);
+    $('#selector-sala').append(`<option value="${sala.id}">${sala.nombre}</option>`);
 }
 function buscarSala(id){
     return salas.find(sala => sala.id === id);
@@ -67,3 +67,185 @@ function salaSeleccionada(objetoSeleccionado){
         $("#informacion-sala").hide();
 }
 
+function valida_nombre(nombre){
+	let valido = true;
+    if(nombre.length < 3){
+        valido = false
+    }else{
+        for(let i = 0; i < nombre.length; i++){
+            if($.isNumeric(nombre[i])){
+                valido = false;
+            }
+        }
+    }
+	
+	return valido;
+}
+
+function valida_apellidos(apellidos){
+	let valido = true;
+    if(apellidos.length < 5){
+        valido = false
+    }else{
+        for(let i = 0; i < apellidos.length; i++){
+            if($.isNumeric(apellidos[i])){
+                valido = false;
+            }
+        }
+    }
+	
+	return valido;
+}
+
+function valida_email(email){
+	let valido = true;
+	if(email.split("@").length != 2){
+		valido = false;
+    }
+	else{
+        if(email.split("@")[0].split(" ").length > 1){
+			valido = false;
+		} 
+        else{
+            if(email.split("@")[1].split(".").length != 2){
+                valido = false;
+            }
+            else{
+                if(email.split("@")[1].split(".")[0].split(" ").length > 1){
+                    valido = false;
+                }
+                if(email.split("@")[1].split(".")[1].split(" ").length > 1){
+                    valido = false;
+                }
+            }
+        }
+    }
+
+	return valido;
+}
+
+function valida_DNI(DNI){
+	let valido = true;
+	let letras = "TRWAGMYFPDXBNJZSQVHLCKET";
+	if(DNI.length != 9){
+			valido = false;
+	}
+	if(valido){
+		for(let i = 0; i < 8; i++){
+			if(!$.isNumeric(DNI[i])){
+				valido = false;
+			}
+		}
+	}
+	if(valido){
+		if($.isNumeric(DNI[8])){
+			valido = false;
+		}
+	}
+	if(valido){
+		let numeros = DNI.substr(0, DNI.length - 1);
+		let resto_division = parseInt(numeros % 23);
+		if(DNI[8].toUpperCase() != letras[resto_division]){
+			valido = false;
+		}
+	}
+	return valido;
+}
+
+function valida_telefono(telefono){
+	let valido = true;
+    if(telefono.length != 9){
+        valido = false
+    }else{
+        for(let i = 0; i < 9; i++){
+            if(!($.isNumeric(telefono[i]))){
+                valido = false;
+            }
+        }
+    }
+	
+	return valido;
+}
+
+function valida_selector(indice){
+	let valido = true;
+
+    if( indice==null || indice==-1){
+        valido = false;
+    }
+	return valido;
+}
+
+function valida_numero_personas(personas){
+    return personas >=1 && personas <= $("#tam-sala");
+}
+
+function valida_fecha(fecha){
+	let valido = true;
+    let hoy = new Date();
+    if(Date.parse(fecha) <= hoy || fecha==""){
+        valido = false;
+    }
+	return valido;
+}
+
+function validacion_fechas(fecha1, fecha2) {
+    let fecha1int = parseInt(fecha1[0]) * 10 + parseInt(fecha1[1]);
+    let fecha2int = parseInt(fecha2[0]) * 10 + parseInt(fecha2[1]);
+    return fecha1int < fecha2int;
+}
+
+function validacion(){
+    let valido = true;
+
+    if(!valida_nombre($("#nombre-reserva").val())){
+        valido = false;
+        $("#nombre-error").html('El campo nombre ha de tener al menos 3 caracteres.');
+    }
+
+    if(!valida_apellidos($("#apellidos-reserva").val())){
+        valido = false;
+        $("#apellidos-error").html("El campo apellidos ha de tener al menos 3 caracteres.");
+    }
+
+    if(!valida_email($("#email-reserva").val())){
+        valido = false;
+        $("#email-error").html("Introduzca una dirección de correo válida.");
+    }
+
+    if(!valida_DNI($("#dni-reserva").val())){
+        valido = false;
+        $("#dni-error").html("El DNI introducido es incorrecto.");
+    }
+
+    if(!valida_telefono($("#telefono-reserva").val())){
+        $("#telefono-error").html("El teléfono introducido es incorrecto.");
+        valido = false;
+    }
+
+    if(!valida_numero_personas($("#personas-reserva",).val())){
+        valido = false;
+        $("#personas-error").html("El número de jugadores ha de estar comprendido entre 10 y 30.");
+    }
+
+    if(!valida_fecha($("#fecha-reserva").val())){
+        $("#fecha-error").html("Elija una fecha posterior a la de hoy.");
+        valido = false;
+    }
+
+    if(!validacion_fechas($("#selector-horai").val(), $("#selector-horaf").val())) {
+        $("#horas-error").html("La hora de finalización debe ser posterior a la de inicio.");
+        valido = false;
+    }
+    
+    if(!valida_selector($("#selector-sala").val())){
+        $("#select-error").html("Debe elegir una de las posibles zonas.");
+        valido = false;
+    }
+    console.log(valido);
+    if(valido){
+        window.alert("Los datos son correctos");
+    }
+
+    return valido;
+}
