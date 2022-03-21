@@ -1,16 +1,14 @@
-body{
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
+#content{
+    width: 100%;
+    display: contents;
     justify-content: center;
-    align-items: center;
 }
 
 .slider{
-    margin: 100;
-    width: 800px;
-    height: 500px;
+    margin: 20 auto;
+    width: 90%;
+    max-width: 100%;
+    height: fit-content;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -31,16 +29,22 @@ body{
 }
 
 .slide img{
-    width: 800px;
+    width: 100%;
     height: 500px;
+}
+
+.navigation{
+    position: relative;
 }
 
 .navigation-manual{
     position: absolute;
-    width: 800px;
+    max-width: 100%;
     margin-top: -40px;
     display: flex;
     justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .manual-btn{
@@ -79,16 +83,19 @@ body{
 .navigation-auto{
     position: absolute;
     display: flex;
-    width: 800px;
+    max-width: 100%;
     justify-content: center;
-    margin-top: 460px;
+    margin-top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+
 }
 
 .navigation-auto div{
     border: 2px solid #40D3DC;
     padding: 5px;
     border-radius: 10px;
-    transition: 1s;
+    transition: 3s;
 }
 
 .navigation-auto div:not(:last-child){
@@ -109,4 +116,61 @@ body{
 
 #radio-4:checked ~ .navigation-auto .auto-btn-4{
     background: #40D3DC;
+}
+
+.noticias{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20;
+}
+
+.row{
+    width: 80%;
+    height: fit-content;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 3%;
+    margin: 5 5;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card img{
+    width: 100%;
+    height: 20%;
+    margin-bottom: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.card p{
+    max-width: 80%;
+    /* font-size: small; */
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
 }
