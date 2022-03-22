@@ -4,7 +4,7 @@
     <title>NF Rooms</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="css/reservar.css">
+    <link rel="stylesheet" type="text/css" href="css/reserva.css">
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
         integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
 
@@ -17,7 +17,7 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 
-<body>
+<body onload="cargarSalas()">
     <header style="position: fixed; top: 0%; width: 100%; z-index: 2;">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -45,27 +45,38 @@
           </nav>
     </header>
 
-    <main id="main"></main>
+    <main id="main">
 
-    <div class="division">
-        <div class="izq">
-            <h1 id="tituloReserva">Reserva tu sala</h1>
-            <div class="grid-item1"><input class="input-center" type="text" placeholder="Nombre" ></div>
-            <div class="grid-item1"><input class="input-center" type="text" placeholder="Apellidos"></div>
-            <div class="grid-item2"><input class="email" type="text" placeholder="Correo electrónico"></div>
-            <div class="grid-item1"><input class="input-center" type="text" placeholder="DNI"></div>
-            <div class="grid-item1"><input class="input-center" type="text" placeholder="Teléfono"></div>
-            <div class="grid-item1"><select id="selectorSala"></select></div>
-            <div class="grid-item1"><input id="selectorFecha"class="input-center" type="date"></div>
-            <button class="botonForm">Reservar</button>
-        </div>
+        <div class="division">
+            <div class="izq">
+                <h1 id="titulo-reserva">Reserva tu sala</h1>
+                <div class="grid-item1"><input class="input-center" type="text" placeholder="Nombre"></div>
+                <div class="grid-item1"><input class="input-center" type="text" placeholder="Apellidos"></div>
+                <div class="grid-item2"><input class="email" type="text" placeholder="Correo electrónico"></div>
+                <div class="grid-item1"><input class="input-center" type="text" placeholder="DNI"></div>
+                <div class="grid-item1"><input class="input-center" type="text" placeholder="Teléfono"></div>
+                <div class="grid-item1"><select id="selectorSala" onchange="salaSeleccionada(this)">
+                <option value="" selected="selected">-- Selecciona una sala --</option>
+                </select></div>
+                <div class="grid-item1"><input id="selectorFecha" class="input-center" type="date"></div>
+                <div class="grid-item2"><button id="botonForm">Reservar</button></div>
+            </div>
 
-        <div class="der">
-            <div class="grid-item1"><input type="text" placeholder="Nombre"></div>
-        </div>
-    </div>
+            <div id="informacion-sala" class="der" style="display:none">
+                <img id="img-sala" alt="Sala X">
+                <div style="height: calc(100% - 420px);">
+                    <div class="descripcion">
+                        <h1 id="titulo-sala"></h1>
+                        <p id="descripcion-sala"></p>
+                        <br>
+                        <p id="tam-sala"></p>
+                        <p id="precio-sala"></p>
 
+                    </div>
+                </div>
+            </div>
 
+    </main>
     <footer>
         <div id="marca">
             <img id="logo" src="./imagenes/a-logo-png-png-image-489304.png" alt="logo">
@@ -95,18 +106,7 @@
         </div>
     </footer>
 
-    <script src="./js/reservar.js"></script>
-    <script>
-        let params = window.location.search;
-        if (params && params !== "?") {
-            let id = parseInt(params.split("=")[1]);
-            let sala = buscarSala(id);
-            if (sala) {
-                document.getElementById("main").innerHTML = JSON.stringify(sala);
-            }
-        }
-        cargarSalas();
-    </script>
+    <script src="./js/reserva.js"></script>
 </body>
 
 </html>

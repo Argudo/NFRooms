@@ -6,8 +6,7 @@ let salas=[
         'precio': 1200,
         'imagen': "imagenes/salas/2614e580a7643d072ccbcec798e19fa3.jpg",
         'descripcion': "La sala Kyoto, es una sala insonorizada dedicada a espacios para baile y yoga.\n" + 
-            "El espacio se compone de una sala de danza o sala de yoga, sala de estar y baños. La sala es de unos 200 metros cuadrados y está equipada con un equipo de sonido, luces y una gran ventana con vistas a los jardines.  Alcanza una capacidad de hasta 50 personas.\n" + 
-            "Está disponible para eventos y fiestas privadas, y también se puede alquilar para clases y talleres."
+            "El espacio se compone de una sala de danza o sala de yoga, sala de estar y baños. La sala es de unos 200 metros cuadrados y está equipada con un equipo de sonido, luces y una gran ventana con vistas a los jardines.  Alcanza una capacidad de hasta 50 personas.\n"
     },
     {
         'id': 2,
@@ -36,13 +35,35 @@ let salas=[
     }
 ];
 function cargarSalas(){
-    salas.forEach(a);
+    salas.forEach(cargarSala);
 }
 
-function a(sala){
-    console.log(salas);
+function cargarSala(sala){
     $('#selectorSala').append(`<option value="${sala.id}">${sala.nombre}</option>`);
 }
 function buscarSala(id){
     return salas.find(sala => sala.id === id);
 }
+
+function salaSeleccionada(objetoSeleccionado){
+    if(objetoSeleccionado.value !== ""){
+
+    var idSala = parseInt(objetoSeleccionado.value);
+
+   
+        $("#informacion-sala").show();
+        
+        sala = buscarSala(idSala);
+
+        if (sala) {
+            $("#titulo-sala").html(sala.nombre);
+            $("#descripcion-sala").html(sala.descripcion);
+            $("#img-sala").attr("src",sala.imagen);
+            $("#precio-sala").html("Precio: " + sala.precio);
+            $("#tam-sala").html("Capacidad: " + sala.capacidad);
+        }
+    }
+    else
+        $("#informacion-sala").hide();
+}
+
