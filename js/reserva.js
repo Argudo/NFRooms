@@ -5,8 +5,9 @@ let salas=[
         'capacidad': 50,
         'precio': 1200,
         'imagen': "imagenes/salas/2614e580a7643d072ccbcec798e19fa3.jpg",
-        'descripcion': "La sala Kyoto, es una sala insonorizada dedicada a espacios para baile y yoga.\n" + 
-            "El espacio se compone de una sala de danza o sala de yoga, sala de estar y baños. La sala es de unos 200 metros cuadrados y está equipada con un equipo de sonido, luces y una gran ventana con vistas a los jardines.  Alcanza una capacidad de hasta 50 personas.\n"
+        'descripcion': "La sala Kyoto, es una sala insonorizada dedicada a espacios para baile y yoga.<br>\n" 
+        + 
+        "La sala está equipada con un equipo de sonido, luces y una gran ventana con vistas a los jardines. Está disponible para clases y talleres.\n"
     },
     {
         'id': 2,

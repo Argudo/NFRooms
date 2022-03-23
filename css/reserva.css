@@ -1,3 +1,6 @@
+#main{
+    margin-bottom: 40px;
+}
 .division{
     display: flex;
     justify-content: space-evenly;
