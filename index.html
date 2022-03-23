@@ -1,40 +1,42 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>NF Rooms</title>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="./css/index.css">
 
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-        <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
     </head>
     <body>
         <header style="position: fixed; top: 0%; width: 100%; z-index: 2;">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                <img class="navbar-brand" src="./imagenes/a-logo-png-png-image-489304.png" style="width: 2em;" href="#">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul id="barra" style="gap: 1em;" class="navbar-nav ms-auto mb-2 mb-lg-0 nav nav-pills nav-justified">
-                        <li class="nav-item">
-                            <a class="nav-link active" style="color: white;" aria-current="page" href="./index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./reserva.html">Reserva</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./salas.html">Nuestras&nbsp;salas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./localizacion.html">Conócenos</a>
-                        </li>
-                    </ul>
+                    <img class="navbar-brand" src="./imagenes/a-logo-png-png-image-489304.png" style="width: 2em;" alt="logo">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul id="barra" style="gap: 1em;" class="navbar-nav ms-auto mb-2 mb-lg-0 nav nav-pills nav-justified">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./reserva.html">Reserva</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" style="color: white;" href="./salas.html">Nuestras&nbsp;salas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./localizacion.html">Conócenos</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </nav>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         </header>
         
         <div id="popup">
@@ -44,7 +46,7 @@
             <div class="card">
                 <h1 id="título">Título de prueba</h1>
                 <br>
-                <p id="cuerpo">Cuerpo de prueba</p></div>
+                <p id="cuerpo">Cuerpo de prueba</p>
             </div>
         </div>
 
@@ -130,13 +132,13 @@
             </div>
 
             <div id="contacto-bloque">
-                <div id="contacto-item">
+                <div class="contacto-item">
                     <h3>Contacto</h3>
                     <p>contacto@nfrooms.com</p>
                     <p>(+34)673 891 638</p>
                 </div>
     
-                <div id="contacto-item">
+                <div class="contacto-item">
                     <h3>Siguenos</h3>
                     <p>Facebook</p>
                     <p>Twitter</p>
