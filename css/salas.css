@@ -330,6 +330,7 @@ html, body {
     .desc-container{
         padding-bottom: 20px;
         margin-bottom: 40px;
+        height: calc(100% - 320px);
     }
 
     .group-large .links{
