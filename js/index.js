@@ -1,8 +1,16 @@
-var counter = 1;
-setInterval(function(){
-    document.getElementById('radio-' + counter).checked = true;
-    counter++;
-    if(counter > 4){
-        counter = 1;
-    }
-}, 5000);
+function cargarInformacion(titulo, cuerpo){
+    let popup = document.getElementById("popup");
+
+    let obj_titulo = document.getElementById("título");
+    let obj_cuerpo = document.getElementById("cuerpo");
+
+    obj_titulo.innerHTML = titulo;
+    obj_cuerpo.innerHTML = cuerpo;
+
+    popup.setAttribute("style","display: flex;");
+}
+
+function cerrarPopUp(){
+    let popup = document.getElementById("popup");
+    popup.setAttribute("style", "display: none");
+}
