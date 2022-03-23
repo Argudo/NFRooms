@@ -197,55 +197,56 @@ function validacion_fechas(fecha1, fecha2) {
 
 function validacion(){
     let valido = true;
-
+    let cadena = "Error: ";
     if(!valida_nombre($("#nombre-reserva").val())){
         valido = false;
-        $("#nombre-error").html('El campo nombre ha de tener al menos 3 caracteres.');
+        cadena += "<br>○ Nombre ha de ser mayor de 2 caracteres";
     }
 
     if(!valida_apellidos($("#apellidos-reserva").val())){
         valido = false;
-        $("#apellidos-error").html("El campo apellidos ha de tener al menos 3 caracteres.");
+        cadena += "<br>○ Apellidos tiene que ser mayor de 2 caracteres";
     }
 
     if(!valida_email($("#email-reserva").val())){
         valido = false;
-        $("#email-error").html("Introduzca una dirección de correo válida.");
+        cadena += "<br>○ Introduzca una dirección de correo válida.";
     }
 
     if(!valida_DNI($("#dni-reserva").val())){
         valido = false;
-        $("#dni-error").html("El DNI introducido es incorrecto.");
+        cadena += "<br>○ El DNI introducido es incorrecto.";
     }
 
     if(!valida_telefono($("#telefono-reserva").val())){
-        $("#telefono-error").html("El teléfono introducido es incorrecto.");
+        cadena += "<br>○ El teléfono introducido es incorrecto.";
         valido = false;
     }
 
     if(!valida_numero_personas($("#personas-reserva",).val())){
         valido = false;
-        $("#personas-error").html("El número de jugadores ha de estar comprendido entre 10 y 30.");
+        cadena += "<br>○ El número de personas ha de ser mayor que uno y menor que la capacidad de la sala.";
     }
 
     if(!valida_fecha($("#fecha-reserva").val())){
-        $("#fecha-error").html("Elija una fecha posterior a la de hoy.");
+        cadena += "<br>Elija una fecha posterior a la de hoy.";
         valido = false;
     }
 
     if(!validacion_fechas($("#selector-horai").val(), $("#selector-horaf").val())) {
-        $("#horas-error").html("La hora de finalización debe ser posterior a la de inicio.");
+        cadena += "<br>○ La hora de finalización debe ser posterior a la de inicio.";
         valido = false;
     }
     
     if(!valida_selector($("#selector-sala").val())){
-        $("#select-error").html("Debe elegir una de las posibles zonas.");
+        cadena += "<br>○ Debe elegir una de las salas";
         valido = false;
     }
     console.log(valido);
     if(valido){
         window.alert("Los datos son correctos");
     }
-
+    else
+        $("#errores").html(cadena);
     return valido;
 }
