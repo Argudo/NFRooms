@@ -1,6 +1,8 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
     <head>
         <title>NF Rooms</title>
+        <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="./css/salas.css">
         <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
@@ -12,13 +14,12 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
-        <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
     </head>
     <body>
         <header style="position: fixed; top: 0%; width: 100%; z-index: 2;">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                  <img class="navbar-brand" src="./imagenes/a-logo-png-png-image-489304.png" style="width: 2em;" href="#">
+                  <img class="navbar-brand" src="./imagenes/a-logo-png-png-image-489304.png" style="width: 2em;" alt="logo">
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -48,10 +49,12 @@
                 </button>
                 <table>
                     <thead>
-                        <th>Nombre</th>
-                        <th>Capacidad</th>
-                        <th>Precio</th>
-                        <th>Caracteristica</th>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Capacidad</th>
+                            <th>Precio</th>
+                            <th>Caracteristica</th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr>
@@ -70,7 +73,7 @@
                 <div class="cont-hover">
                     <img src="./imagenes/salas/2614e580a7643d072ccbcec798e19fa3.jpg" alt="Sala X">
                     <div class="middle">
-                        <div class="text" click="reserva(50)">Reserva</div>
+                        <!-- Espacio para boton de reserva o informacion adicional -->
                     </div>
                 </div>
                 <div class="desc-container">
@@ -82,10 +85,10 @@
                         
                         Está disponible para clases y talleres.</p>
                     </div>
-                    <section class="links">
+                    <div class="links">
                         <p onclick="cargarInformacion('Sala Kyoto', 50, 1200);">Mas&nbsp;información</p>
-                        <a href="reserva.html"><button class="pure-button">Reserva</button></a>
-                    </section>
+                        <form style="display: inline" action="/reserva.html" method="get"><button class="pure-button">Reserva</button></form>
+                    </div>
                 </div>
             </article>
 
@@ -97,10 +100,10 @@
                             <h1>Sala Miami</h1>
                             <p>La sala Miami es una sala de estilo moderno con un par de elegantes mesas de trabajo y cómodas sillas de oficina que, junto con las lámparas de lectura, crean un ambiente relajado y tranquilo.</p>
                         </div>
-                        <section class="links">
+                        <div class="links">
                             <p onclick="cargarInformacion('Sala Miami', 2, 40);">Mas&nbsp;información</p>
-                            <a href="reserva.html"><button class="pure-button">Reserva</button></a>
-                        </section>
+                            <form style="display: inline" action="/reserva.html" method="get"><button class="pure-button">Reserva</button></form>
+                        </div>
                     </div>
                 </article>
                 
@@ -115,10 +118,10 @@
 
                                 La sala se encuentra en el segundo piso.</p>
                         </div>
-                        <section class="links">
+                        <div class="links">
                             <p onclick="cargarInformacion('Sala Otawa', 1, 25);">Mas&nbsp;información</p>
-                            <a href="reserva.html"><button class="pure-button">Reserva</button></a>
-                        </section>
+                            <form style="display: inline" action="/reserva.html" method="get"><button class="pure-button">Reserva</button></form>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -127,7 +130,7 @@
                 <div class="cont-hover">
                     <img src="./imagenes/salas/DSC_0049-350x350.jpg" alt="Sala X">
                     <div class="middle">
-                        <div class="text">Reserva</div>
+                        <!-- Espacio para boton de reserva o informacion adicional -->
                     </div>
                 </div>
                 <div class="desc-container">
@@ -135,10 +138,10 @@
                         <h1>Sala Berlin</h1>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                     </div>
-                    <section class="links">
+                    <div class="links">
                         <p onclick="cargarInformacion('Sala Berlin', 5, 500);">Mas&nbsp;información</p>
-                        <a href="reserva.html"><button class="pure-button">Reserva</button></a>
-                    </section>
+                        <form style="display: inline" action="/reserva.html" method="get"><button class="pure-button">Reserva</button></form>
+                    </div>
                 </div>
             </article>
 
@@ -150,13 +153,13 @@
             </div>
 
             <div id="contacto-bloque">
-                <div id="contacto-item">
+                <div class="contacto-item">
                     <h3>Contacto</h3>
-                    <p>contacto@nfrooms.com</p>
+                    <a href="mailto:contacto@nfrooms.com">contacto@nfrooms.com</a>
                     <p>(+34) 673 891 638</p>
                 </div>
     
-                <div id="contacto-item">
+                <div class="contacto-item">
                     <h3>Siguenos</h3>
                     <p>Facebook</p>
                     <p>Twitter</p>
@@ -171,7 +174,6 @@
                 <p>Noticias</p>
             </div>
         </footer>
-        <!-- <script type="text/javascript" src="js/salas.js"></script> -->
         <script src="js/salas.js"></script>
     </body>
 </html>

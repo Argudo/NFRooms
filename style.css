@@ -16,7 +16,7 @@ body{
     display: inline-flex;
     align-items: center;
     font-size: large;
-    text-decoration: bold;
+    font-weight: bold;
 }
 
 #logo{
@@ -84,7 +84,7 @@ footer #marca{
     display: inline-flex;
     align-items: center;
     font-size: large;
-    text-decoration: bold;
+    font-weight: bold;
 }
 
 #contacto-bloque{
@@ -217,13 +217,13 @@ footer #marca{
         width: 100%;
     }
 
-    #contacto-item{
+    .contacto-item{
        text-align: center;
        align-items: center;
         padding-top: 20px;
     }
 
-    #contacto-item p{
+    .contacto-item p{
         width: 100%;
         justify-content: center;
         padding-top: 4px;
