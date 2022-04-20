@@ -66,6 +66,24 @@
                     <h1>Reserva tu sala</h1>
                     <p id="errores" class="mensaje-error"></p>
                 </div>
+                <!-- Examen -->
+                <div class="grid-item2" id="id">
+                    <div class="examen-lado">
+                        <div class="examen-id">
+                            <label for="id-reserva" class="label-formulario">Introduzca Identificador</label><br>
+                            <input id="id-reserva" class="email" type="text" placeholder="00" maxlength="6" required>
+                        </div>
+                        
+                        <div class="examen-button">
+                            <button type="button" id="disponible">Comprobar disponibilidad</button>
+                        </div>
+                    </div>
+                    <div class="examen-id-nodisponible">
+                        <p>Identificador <span>no</span> disponible</p>
+                    </div>
+                </div>
+                
+                <!-- Fin Examen -->
                 <div class="grid-item1">
                     <label for="nombre-reserva" class="label-formulario">Nombre </label><br>
                     <input id="nombre-reserva" class="input-center" type="text" placeholder="Manuel">

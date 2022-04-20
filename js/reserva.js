@@ -1,3 +1,27 @@
+/* Examen */
+document.addEventListener('click', ev =>{
+    if(ev.target.matches("#disponible")){
+        disponible();
+    }
+})
+
+function disponible(){
+    let idObj = document.getElementById('id-reserva');
+    let idNoDisponible = document.getElementsByClassName("examen-id-nodisponible");
+    let id = idObj.value.toString();
+
+    if(id.length >= 4){
+        idObj.classList.add("disponible");
+        idNoDisponible[0].setAttribute('style', 'display: none;');
+    }
+    else{
+        idObj.classList.remove("disponible");
+        idNoDisponible[0].setAttribute('style', 'display: block;');
+    }
+}
+
+/* Fin examen */
+
 let salas=[
     {
         'id': 1,

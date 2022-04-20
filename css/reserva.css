@@ -1,3 +1,49 @@
+/* Examen */
+.examen-lado{
+    display: flex;
+    gap: 1em;
+}
+
+.examen-button{
+    padding-top: 1.4em;
+    height: 1em;
+    width: 50%;
+}
+
+.examen-button > button{
+    width: 100%;
+    height: 1.6em;
+}
+
+.examen-id-nodisponible{
+    margin-top: 50px;
+    display: none;
+}
+
+p > span{
+    text-transform: uppercase;
+}
+
+.disponible{
+    border: 2px solid rgb(54, 255, 44);
+}
+
+@media screen and (max-width: 700px) {
+    .examen-lado{
+        display: block;
+    }
+    .examen-button{
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    #id{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Fin examen */
+
 #main{
     margin-bottom: 40px;
 }
